@@ -1,0 +1,11 @@
+### gradle ###
+.gradle/
+gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+### build artefacts ###
+build/
+
+### IntelliJ IDEA ###
+.idea
+
