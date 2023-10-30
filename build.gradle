@@ -1,0 +1,45 @@
+// Gradle build file
+// Note: Versions of all dependencies are defined in gradle.properties
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.5'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'ai-support-test'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// REST
+	implementation "org.springframework.boot:spring-boot-starter-web:3.1.5"
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test:3.1.5"
+
+	// log4j2 for logging
+	implementation "org.springframework.boot:spring-boot-starter-log4j2:3.1.5"
+	configurations {
+		all*.exclude module : 'spring-boot-starter-logging'
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+jar {
+	archiveName "${project.name}.jar"
+
+	manifest.attributes(
+			'Main-Class': 'worldline.com.ai.examples.pizzadelivery.PizzaDeliveryMain',
+			'Implementation-Title': project.name,
+			'Implementation-Version': project.version,
+			'Class-Path': configurations.runtimeClasspath.files.collect { "lib/$it.name" }.join(' ')
+	)
+}
