@@ -1,4 +1,5 @@
 # AI assisted Coding - Kickoff
+<<<<<<<< Status Alpha, first version for review, learning ... >>>>>>>>
 
 Welcome on board!
 
