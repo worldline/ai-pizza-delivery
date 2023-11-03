@@ -151,7 +151,8 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
    use, but you lack a piece of syntax, say in our example you forgot how to best reference the `resource` folder again.
    But be warned, the 80/20 rule applies and verification of the created snippet is a MUST. The correctness 
    of the code, edge case coverage ... are suboptimal. For example good luck to get your AI to correctly guess the
-   equals method in the `Pizza` class, an algorithmic and not a syntactical challenge.
+   equals method in the `Pizza` class, an algorithmic and not a syntactical challenge. Also remember that the inline
+   suggestions are not a chat interface, write actual comments, not questions or queries!
 
 
 5) <b>code snippet generation</b> for larger pieces of functionality with iterative improvements - using the chat functionality.
