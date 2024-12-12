@@ -166,7 +166,7 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
    suggestions are not a chat interface, write actual comments, not questions or queries!
 
 
-5) <b>code snippet generation</b> for larger pieces of functionality with iterative improvements - using the chat functionality.
+5) <b>code snippet generation</b> for larger pieces of functionality with iterative improvements - use the chat functionality.
    The idea is that you use the AI chat to create a whole code skeleton and refine the results by pasting in syntax errors,
    warnings and additional hints until you are satisfied.
    This is how most of the PizzaDelivery project was created but there are some things to consider: <br><br>
@@ -194,37 +194,44 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
       on anti-patterns.
  
 
-6) <b>comment generation</b> is finally a nice addon that some of the tools provide. Especially for boilerplate Java Doc
-   you can save some seconds for the generation. Again this tends to work better with context, for instance in the Pizza
-   class there is a special equals method. Try to crate the Java Doc:
-   ```java
-   /**
-     * Determines whether this Pizza object is equal to another object.
-     *
-     * @param  o  the object to compare to
-     * @return    true if the objects are equal, false otherwise
-   */
-   ```
-   Then tell the AI to pick up the details embedded in inline comments. For instance this works in Codeium (some other similar queries don't work^^)
-   ```
-      please be more specific about when a pizza is equal to another pizza
-   ```
-   and the result would be something like this
-   ```java
-   /**
-     * Determines whether this Pizza object is equal to another object.
-     *
-     * @param  o  the object to compare to
-     * @return    true if the objects are equal, false otherwise
-     * 
-     * This method compares this Pizza object to another object to determine if they are equal in terms of their name and ingredients.
-     * It accepts two pizzas as equal if either the name or the ingredients are equal.
-     * However, it accepts the ingredients as equal if they have the same elements, regardless of their order.
-     * In this case, the method ignores duplicates in the lists and assumes that unique elements are present.
-     *
-     * @see #equals(Object)
-     */
-   ```   
+6) <b>context sensitive generation</b> by end of 2024 the way Copilot provides rich features like test generation,
+comment generation, the aforementioned explanations, ... is through a unified interface, the context-sensitive chat
+function. Mark the lines of code, the class, method, ... that you want to refer to and chat it the task that it should complete. 
+ 
+For instance in the Pizza class there is a special equals method. Try to crate the Java Doc:
+
+```java
+/**
+* Determines whether this Pizza object is equal to another object.
+*
+* @param  o  the object to compare to
+* @return    true if the objects are equal, false otherwise
+  */
+```
+
+Then tell the AI to pick up the details embedded in inline comments.
+
+```
+please be more specific about when a pizza is equal to another pizza
+```
+
+and the result might be something like this
+
+```java
+/**
+* Determines whether this Pizza object is equal to another object.
+*
+* @param  o  the object to compare to
+* @return    true if the objects are equal, false otherwise
+*
+* This method compares this Pizza object to another object to determine if they are equal in terms of their name and ingredients.
+* It accepts two pizzas as equal if either the name or the ingredients are equal.
+* However, it accepts the ingredients as equal if they have the same elements, regardless of their order.
+* In this case, the method ignores duplicates in the lists and assumes that unique elements are present.
+*
+* @see #equals(Object)
+  */
+ ```
 
 ## Further Reading (by Worldliners)
 
