@@ -32,14 +32,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-jar {
-	archiveName "${project.name}.jar"
-
-	manifest.attributes(
-			'Main-Class': 'worldline.com.ai.examples.pizzadelivery.PizzaDeliveryMain',
-			'Implementation-Title': project.name,
-			'Implementation-Version': project.version,
-			'Class-Path': configurations.runtimeClasspath.files.collect { "lib/$it.name" }.join(' ')
-	)
-}
