@@ -99,11 +99,14 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
    
    << I use Log4J, can you show me how to replace the printStackTrace in the code?
    ```
-   (with Codeium you can reference the DataParser, if the @DataParser doesn't work try (DataParser.java:21:13.:21:33))
+   (with GitHub Copilot you can mark the lines in question and ask for help with the context-sensitive chat function)
 
 
 3) <b>type along</b> improving or worsening the inline suggestions while you code. This is clearly the most accessible
-   feature although in my opinion not the most powerful one.
+   feature and if you make use of shortcuts to paste in (partial) suggestions and switch between alternatives you can save time. But
+   AI inline completion currently rather fights with IDE build in completion instead of augmenting it. This is probably why they toned it down
+   quite a bit recently in Copilot. 
+
    For an example navigate to DataServiceTest and drop these lines from testGetPizza
 
    ```java
@@ -125,6 +128,8 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
    context from `List<String> pizzas` a few lines earlier and correctly suggested the Pepperoni pizza including ingredients.
    Try it out, replace Pizza Pepperoni with Pizza Kiwi, repeat and check how/if the suggestions change.
 
+   If the suggestions don't start flying at you try to trigger them using the context-sensitive chat button or ask for 
+   suggestions with the right shortcut.
 
 4) <b>comment coding</b> we learnt about test driven development, diagrams first, API first 
    and now with AI coding assistants it turns out comments before code is a useful pattern too. Remember, a key learning 
