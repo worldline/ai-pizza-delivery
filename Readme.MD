@@ -198,7 +198,8 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
 comment generation, the aforementioned explanations, ... is through a unified interface, the context-sensitive chat
 function. Mark the lines of code, the class, method, ... that you want to refer to and chat it the task that it should complete. 
  
-For instance in the Pizza class there is a special equals method. Try to crate the Java Doc:
+For instance in the Pizza class there is a special equals method. Try to crate the Java Doc by marking the method and asking
+the context sensitive chat for a JavaDoc. The result should be something like this:
 
 ```java
 /**
@@ -209,7 +210,7 @@ For instance in the Pizza class there is a special equals method. Try to crate t
   */
 ```
 
-Then tell the AI to pick up the details embedded in inline comments.
+Then tell the AI to pick up the details embedded in inline comments (if it didn't already. If it did ask it to omit the details).
 
 ```
 please be more specific about when a pizza is equal to another pizza
@@ -232,6 +233,8 @@ and the result might be something like this
 * @see #equals(Object)
   */
  ```
+
+go wild, try to let it create a test case for you and then ask for a testcase that specifically tests the "order assumption"... 
 
 ## Further Reading (by Worldliners)
 
