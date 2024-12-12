@@ -36,7 +36,8 @@ Text models work with a context i.e. there is a certain "memory" buffer that inf
 This can be the conversation that you have, your open source file, a source file that you reference or even your local
 code base. This context heavily influences your results, for instance in a conversation you might tell the model why
 you are not satisfied with a result and how it could be improved. In contrast to training and tuning the context
-is rather limited in size, currently several thousand words are a reasonable expectation.
+is more limited in size, but currently (end of 2024) most practical limitations have been lifted and many thousand
+words can be processed.
 
 ## What should be my takeaway from this?
 
@@ -73,9 +74,8 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
 
       "Hawai:Tomato,Pineapple,Cheese,Ham"
    ```
-   This is how I created the `resources/*.data` files. Play around for the ingredients! It worked best in ChatGPT, the Code AIs got the counting wrong and sometimes the format.
-   This is also an excellent example for iterations, if the format is not respected, try to correct the AI. (Since we talk about pizza recipes using ChatGPT should be inline with
-   the company policies)
+   This is how I created the `resources/*.data` files. Play around for the ingredients! End of 2023 the Code AIs had some issues with this task but ChatGPT worked great.
+   Now (end of 2024) it works well in IntelliJ too. This is also an excellent example for iterations, if the format is not respected, try to correct the AI.
 
 
 2) <b>to explain things to you</b> either directly "button next to your code" or by referencing the relevant snippet in
