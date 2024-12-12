@@ -66,6 +66,12 @@ took its creator over 600 iterations and manual interventions! <b>thus:</b>
 
 ## Hands On - Use Cases
 
+```
+   // try
+   https://127.0.0.1:8090/pizzas
+   https://127.0.0.1:8090/ingredients
+```
+
 1) <b>to generate natural text</b> in a pre-specified format: test data, example data,
    dummy data for mocks ....  for instance try this:
    ```
